@@ -13,7 +13,7 @@ const App = () => {
   //Run on page load
   useEffect(() => {
     getQuotes([]);
-  }, []);
+  }, [query]);
 
   async function getQuotes(url) {
     // Storing response
@@ -41,6 +41,7 @@ const App = () => {
   const getSearch = (e) => {
     e.preventDefault();
     setQuery(search);
+    //setSearch(""); //sets the search bar empty again
   };
   return (
     <div className="App">
@@ -63,4 +64,4 @@ const App = () => {
 };
 export default App;
 
-//!siiiuu
+//!siiiuuuu
