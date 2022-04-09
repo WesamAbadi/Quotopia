@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Quote from "./Quote";
+import Pages from "./pages/Pages";
 import "./App.css";
+
 const App = () => {
-  const apiUrl = "https://type.fit/api/quotes";
+  /* const apiUrl = "https://type.fit/api/quotes";
   const bbApi = "https://breakingbadapi.com/api/quote";
   const bbRandom = "/random";
   const bbAll = "s";
@@ -22,7 +23,7 @@ const App = () => {
     // Storing data in form of JSON
     var data = await response.json();
     setQuotes(data);
-    console.log(data[0]);
+    //console.log(data[0]);
   }
   //getQuotes([]);
   //Fetch from the API, doesnt work for some
@@ -33,7 +34,6 @@ const App = () => {
     setQuotes(data);
     console.log(data[1]);
   };
-*/
   const updateSearch = (e) => {
     setSearch(e.target.value);
     console.log(search);
@@ -43,9 +43,10 @@ const App = () => {
     setQuery(search);
     //setSearch(""); //sets the search bar empty again
   };
+  */
   return (
     <div className="App">
-      <form onSubmit={getSearch} className="search-form">
+      {/*  <form onSubmit={getSearch} className="search-form">
         <input
           className="search-bar"
           type="text"
@@ -55,10 +56,9 @@ const App = () => {
         <button className="search-btn" type="submit">
           Search
         </button>
-      </form>
-      {quotes.map((quote) => (
-        <Quote title={quote.quote} author={quote.author} key={quote.quote_id} />
-      ))}
+        </form>
+      */}
+      <Pages />
     </div>
   );
 };
