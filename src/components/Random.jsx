@@ -21,7 +21,7 @@ function Random() {
       <h1>RANDOM GOT</h1>
       {popular.map((line) => {
         return (
-          <div>
+          <div key={line.sentence}>
             <p>{line.sentence}</p>
           </div>
         );

@@ -46,7 +46,7 @@ function Quote({ title, author }) {
       {quotes.map((quote) => {
         if (quote.quote_id <= 4) {
           return (
-            <div>
+            <div key={quote.quote_id}>
               <p>{quote.quote}</p>
             </div>
           );
