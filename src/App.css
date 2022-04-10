@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'GOTfont';
+  src: local('GOTfont'), url('./fonts/Game of Thrones.ttf') format('woff');
+  /* other formats include: 'woff2', 'truetype, 'opentype',                            'embedded-opentype', and 'svg' */
+  font-family: 'BBfont';
+  src: local('BBfont'), url('./fonts/Heart\ Breaking\ Bad.otf') format('woff');
+  /* other formats include: 'woff2', 'truetype, 'opentype',                            'embedded-opentype', and 'svg' */
+}
 .App {
+  background-color: antiquewhite;
   text-align: center;
+  
+}
+
+img{
+  max-height: 150px;
+  max-width: 300px;
 }

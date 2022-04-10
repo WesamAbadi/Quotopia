@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 
 function Quote({ title, author }) {
   const apiUrl = "https://type.fit/api/quotes";
@@ -42,12 +43,17 @@ function Quote({ title, author }) {
 
   return (
     <div>
-      <h1>I am breaking bad</h1>
+      <Block>
+        <h1>I am breaking bad</h1>
+      </Block>
       {quotes.map((quote) => {
         if (quote.quote_id <= 4) {
           return (
             <div key={quote.quote_id}>
-              <p>{quote.quote}</p>
+              <Block>
+                <p>{quote.quote}</p>
+              </Block>
+              <h3>---</h3>
             </div>
           );
         }
@@ -58,5 +64,10 @@ function Quote({ title, author }) {
     </div>
   );
 }
-
+//wee
+const Block = styled.div`
+  text-align: center;
+  font-family: "BBfont";
+  font-size: 30px;
+`;
 export default Quote;
