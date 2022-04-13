@@ -10,7 +10,7 @@ function Random() {
 
   const getPopular = async () => {
     const api = await fetch(
-      "https://game-of-thrones-quotes.herokuapp.com/v1/random/3"
+      "https://game-of-thrones-quotes.herokuapp.com/v1/random/4"
     );
     const data = await api.json();
     setPopular(data);

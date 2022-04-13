@@ -26,6 +26,20 @@ button{
   border: 0rem;
   margin: 10px;
   font-size: 20px;
+  font-weight: bold;
   cursor: pointer;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+::-webkit-scrollbar {
+  background-color: burlywood;
+  width: 8px;
+  border-radius: .2rem;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: burlywood;
+  width: 8px;
+  border-radius: .2rem;
 }

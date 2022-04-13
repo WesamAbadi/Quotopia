@@ -63,6 +63,9 @@ const Container = styled.div`
   max-width: 90%;
   max-height: 50%;
   height: 800px;
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 `;
 
 export default Home;
