@@ -2,23 +2,51 @@ import Random from "../components/Random";
 import Popular from "../components/Popular";
 import Quote from "../components/Quote";
 import styled from "styled-components";
-
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function Home() {
+  const [stateB, setStateB] = useState(false);
+  const [stateG, setStateG] = useState(false);
+  const [clear, setclear] = useState(false);
+
+  function renderMe(show) {
+    if (show === "G") {
+      setStateG(true);
+      setStateB(false);
+    } else if (show === "B") {
+      setStateG(false);
+      setStateB(true);
+    }
+    if (stateG || stateB) setclear(true);
+    else setclear(false);
+  }
+  let initialState = () => {
+    setStateG(false);
+    setStateB(false);
+    setclear(false);
+  };
+
   return (
-    <Main>
+    <div>
       <Title>
         <h1>API APP!</h1>
       </Title>
-      <Container>
-        <div>
+      <button onClick={() => renderMe("G")}>GOT</button>
+      <button onClick={() => renderMe("B")}>BRBA</button>
+      {clear === true && (
+        <button id="clear-btn" onClick={() => initialState()}>
+          Clear
+        </button>
+      )}
+
+      <Main>
+        <Container>
           <Popular />
-          <Random />
-          <Quote />
-        </div>
-      </Container>
-    </Main>
+          {stateG === true && <Random />}
+          {stateB === true && <Quote />}
+        </Container>
+      </Main>
+    </div>
   );
 }
 const Main = styled.div``;
