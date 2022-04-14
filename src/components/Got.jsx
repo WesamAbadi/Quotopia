@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-function Random() {
+function Got() {
   const [popular, setPopular] = useState([]);
 
   useEffect(() => {
@@ -10,7 +10,7 @@ function Random() {
 
   const getPopular = async () => {
     const api = await fetch(
-      "https://game-of-thrones-quotes.herokuapp.com/v1/random/4"
+      "https://game-of-thrones-quotes.herokuapp.com/v1/random/5"
     );
     const data = await api.json();
     setPopular(data);
@@ -57,4 +57,4 @@ const Block = styled.div`
   text-align: center;
   font-family: "GOTfont";
 `;
-export default Random;
+export default Got;

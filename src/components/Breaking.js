@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-function Quote({ title, author }) {
+function Breaking({ title, author }) {
   const apiUrl = "https://type.fit/api/quotes";
   const bbApi = "https://breakingbadapi.com/api/quote";
   const bbRandom = "/random";
@@ -70,4 +70,4 @@ const Block = styled.div`
   font-family: "BBfont";
   font-size: 30px;
 `;
-export default Quote;
+export default Breaking;

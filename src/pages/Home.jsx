@@ -1,6 +1,6 @@
-import Random from "../components/Random";
+import Got from "../components/Got";
 import Popular from "../components/Popular";
-import Quote from "../components/Quote";
+import Breaking from "../components/Breaking";
 import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 
@@ -9,16 +9,18 @@ function Home() {
   const [stateG, setStateG] = useState(false);
   const [clear, setclear] = useState(false);
 
+  //Make UseEffect on a refresh button, fetch only first time.
+
   function renderMe(show) {
     if (show === "G") {
       setStateG(true);
       setStateB(false);
+      setclear(true);
     } else if (show === "B") {
       setStateG(false);
       setStateB(true);
+      setclear(true);
     }
-    if (stateG || stateB) setclear(true);
-    else setclear(false);
   }
   let initialState = () => {
     setStateG(false);
@@ -27,29 +29,43 @@ function Home() {
   };
 
   return (
-    <div>
-      <Title>
-        <h1>API APP!</h1>
-      </Title>
-      <button onClick={() => renderMe("G")}>GOT</button>
-      <button onClick={() => renderMe("B")}>BRBA</button>
-      {clear === true && (
-        <button id="clear-btn" onClick={() => initialState()}>
-          Clear
-        </button>
-      )}
+    <Body>
+      <Test>
+        <Title>
+          <h1>Quotopia!</h1>
+          {!clear && <h4>Choose your show</h4>}
+        </Title>
+        <button onClick={() => renderMe("G")}>Game of Thrones</button>
+        <button onClick={() => renderMe("B")}>Breaking Bad</button>
+        {clear === true && (
+          <button id="clear-btn" onClick={() => initialState()}>
+            Clear
+          </button>
+        )}
 
-      <Main>
-        <Container>
-          <Popular />
-          {stateG === true && <Random />}
-          {stateB === true && <Quote />}
-        </Container>
-      </Main>
-    </div>
+        <Main>
+          {(stateG || stateB) && (
+            <Container>
+              <Popular />
+              {stateG && <Got />}
+              {stateB && <Breaking />}
+            </Container>
+          )}
+        </Main>
+      </Test>
+    </Body>
   );
 }
 const Main = styled.div``;
+const Test = styled.div`
+  margin-top: 10%;
+`;
+const Body = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+`;
 
 const Title = styled.div`
   padding-bottom: 30px;
@@ -58,11 +74,10 @@ const Title = styled.div`
 const Container = styled.div`
   margin: auto;
   padding: 15px;
-  border: 0.3rem solid darkkhaki;
+  border: 0.3rem solid whitesmoke;
   border-radius: 1rem;
-  max-width: 90%;
-  max-height: 50%;
-  height: 800px;
+  max-height: 800px;
+  width: 80%;
   overflow: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
