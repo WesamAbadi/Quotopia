@@ -18,8 +18,9 @@ function Got() {
   };
   let image;
   return (
-    <div>
-      <h1>I am Game of thrones!</h1>
+    <Main>
+      <h1>I AM GAME OF THRONES!</h1>
+      <br />
       {popular.map((line) => {
         const images = line.character.house.slug;
         //start the switch
@@ -37,24 +38,41 @@ function Got() {
             line.image = require("../images/Targaryen.png");
             break;
           default:
-            line.image = require("../images/GOT.png");
+            line.image = require("../images/GOT2.png");
             console.log(`No image for ${images}.`);
         }
 
         return (
           <Block key={line.sentence}>
-            <p>{line.sentence}</p>
-            <img src={line.image} alt="" />
-            <h3>----------------</h3>
+            <T1>
+              <p>{line.sentence}</p>
+            </T1>
+            <T2>
+              <img src={line.image} alt="" />
+            </T2>
+
+            <img src={require("../images/line.png")} alt="" />
           </Block>
         );
       })}
-    </div>
+    </Main>
   );
 }
-
+const Main = styled.div`
+  font-family: "GOTfont";
+`;
 const Block = styled.div`
   text-align: center;
   font-family: "GOTfont";
+  font-weight: bold;
 `;
+const T1 = styled.div`
+  float: right;
+  text-align: justify;
+  width: 80%;
+`;
+const T2 = styled.div`
+  text-align: left;
+`;
+
 export default Got;

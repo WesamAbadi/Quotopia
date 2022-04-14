@@ -1,0 +1,64 @@
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes strech {
+    0% {
+        max-height: 12vw;
+    }
+
+    70% {
+        max-height: 16vw;
+    }
+
+    100% {
+        max-height: 15vw;
+    }
+}
+
+@keyframes strech2 {
+    0% {
+        top: 10%
+    }
+
+    80% {
+        top: 25%;
+    }
+
+    100% {}
+}
+
+@keyframes pop {
+    0% {
+        border: 1px solid white;
+    }
+
+    50% {
+        border: 3px solid white;
+    }
+
+    90% {
+        border: 2px solid white;
+    }
+}
+
+#info{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+#info:hover{
+    color: burlywood;
+}

@@ -2,6 +2,7 @@ import Got from "../components/Got";
 import Popular from "../components/Popular";
 import Breaking from "../components/Breaking";
 import styled from "styled-components";
+import "./Home.css";
 import React, { useState, useEffect } from "react";
 
 function Home() {
@@ -42,6 +43,7 @@ function Home() {
             Clear
           </button>
         )}
+        <button id="info">i</button>
 
         <Main>
           {(stateG || stateB) && (
@@ -58,7 +60,7 @@ function Home() {
 }
 const Main = styled.div``;
 const Test = styled.div`
-  margin-top: 10%;
+  padding-top: 10%;
 `;
 const Body = styled.div`
   display: flex;
@@ -72,12 +74,14 @@ const Title = styled.div`
 `;
 
 const Container = styled.div`
+  animation: appear;
+  animation-duration: 1.1s;
   margin: auto;
   padding: 15px;
   border: 0.3rem solid whitesmoke;
   border-radius: 1rem;
   max-height: 800px;
-  width: 80%;
+  width: 90%;
   overflow: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
