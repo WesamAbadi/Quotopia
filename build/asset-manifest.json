@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.840c726b.css",
+    "main.js": "/static/js/main.1c038f1c.js",
+    "static/js/787.6aed819c.chunk.js": "/static/js/787.6aed819c.chunk.js",
+    "static/media/GOT2.png": "/static/media/GOT2.ce483067555b56fa015a.png",
+    "static/media/Heart Breaking Bad.otf": "/static/media/Heart Breaking Bad.3513760cec3086c0167f.otf",
+    "static/media/Targaryen.png": "/static/media/Targaryen.1119ff88839f3bdaed70.png",
+    "static/media/Lannister.png": "/static/media/Lannister.0038493e1e2e6052252f.png",
+    "static/media/Game of Thrones.ttf": "/static/media/Game of Thrones.71fa190a8a1a34123fa1.ttf",
+    "static/media/Stark.png": "/static/media/Stark.a0b056cd58110a1b5fb2.png",
+    "static/media/Baratheon.png": "/static/media/Baratheon.c48fada66bc169928092.png",
+    "index.html": "/index.html",
+    "main.840c726b.css.map": "/static/css/main.840c726b.css.map",
+    "main.1c038f1c.js.map": "/static/js/main.1c038f1c.js.map",
+    "787.6aed819c.chunk.js.map": "/static/js/787.6aed819c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.840c726b.css",
+    "static/js/main.1c038f1c.js"
+  ]
+}
